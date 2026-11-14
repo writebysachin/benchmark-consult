@@ -1,6 +1,6 @@
 import { NAV_LINKS, CONTACT } from "@/lib/data";
 import { Button } from "@/components/ui/Button";
-import { Facebook, Instagram, Linkedin, MapPin, Mail, Phone } from "lucide-react";
+import { MapPin, Mail, Phone } from "lucide-react";
 
 const FOOTER_LINKS = {
   "Quick Links": NAV_LINKS,
@@ -12,10 +12,43 @@ const FOOTER_LINKS = {
   ],
 };
 
+const SOCIAL = [
+  {
+    label: "Facebook",
+    href: "#",
+    svg: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      </svg>
+    ),
+  },
+  {
+    label: "Instagram",
+    href: "#",
+    svg: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+      </svg>
+    ),
+  },
+  {
+    label: "LinkedIn",
+    href: "#",
+    svg: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+        <rect x="2" y="9" width="4" height="12" />
+        <circle cx="4" cy="4" r="2" />
+      </svg>
+    ),
+  },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-slate-900 text-slate-300" role="contentinfo">
-      {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
@@ -33,7 +66,6 @@ export default function Footer() {
               opportunities since 2012. Your trusted partner in international
               education.
             </p>
-            {/* Newsletter */}
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">
               Stay Updated
             </p>
@@ -109,20 +141,15 @@ export default function Footer() {
               </p>
             </address>
 
-            {/* Social */}
             <div className="flex gap-3 mt-6">
-              {[
-                { label: "Facebook", icon: <Facebook className="w-4 h-4" />, href: "#" },
-                { label: "Instagram", icon: <Instagram className="w-4 h-4" />, href: "#" },
-                { label: "LinkedIn", icon: <Linkedin className="w-4 h-4" />, href: "#" },
-              ].map((s) => (
+              {SOCIAL.map((s) => (
                 <a
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
                   className="w-9 h-9 bg-slate-800 hover:bg-orange-500 rounded-full flex items-center justify-center text-slate-400 hover:text-white transition-all duration-200"
                 >
-                  {s.icon}
+                  {s.svg}
                 </a>
               ))}
             </div>

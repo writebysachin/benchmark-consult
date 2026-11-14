@@ -9,15 +9,6 @@
   --gray-soft: #F8FAFC;
 }
 
-@theme {
-  --color-orange: #F97316;
-  --color-orange-dark: #EA6C0A;
-  --color-orange-light: #FED7AA;
-  --color-navy: #0F172A;
-  --color-charcoal: #1E293B;
-  --color-gray-soft: #F8FAFC;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -28,7 +19,6 @@ body {
   background: #ffffff;
 }
 
-/* Smooth scroll offset for sticky header */
 section[id] {
   scroll-margin-top: 80px;
 }
