@@ -1,3 +1,5 @@
+"use client";
+
 import { NAV_LINKS, CONTACT } from "@/lib/data";
 import { Button } from "@/components/ui/Button";
 import { MapPin, Mail, Phone } from "lucide-react";
