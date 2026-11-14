@@ -3,6 +3,9 @@ node_modules/
 .pnp
 .pnp.js
 
+# Lock files — let Netlify generate clean ones
+package-lock.json
+
 # Next.js build output
 .next/
 out/
