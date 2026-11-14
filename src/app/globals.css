@@ -12,3 +12,18 @@ body {
 section[id] {
   scroll-margin-top: 80px;
 }
+
+/* Remove Netlify badge */
+[data-netlify-identity-button],
+[data-netlify-identity-menu],
+#netlify-identity-widget,
+.netlify-identity-button,
+iframe[src*="netlify"],
+div[class*="netlify-identity"],
+a[href*="netlify.com"][style*="position: fixed"],
+a[href*="netlify.com"][style*="position:fixed"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

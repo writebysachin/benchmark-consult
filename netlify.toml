@@ -6,9 +6,13 @@
   NODE_VERSION = "22"
   NEXT_TELEMETRY_DISABLED = "1"
 
+[dev]
+  command = "npm run dev"
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Inject script to remove Netlify badge
 [[headers]]
   for = "/*"
   [headers.values]
@@ -16,6 +20,7 @@
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "frame-ancestors 'none'"
 
 [[headers]]
   for = "/_next/static/*"
