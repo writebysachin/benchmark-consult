@@ -31,6 +31,13 @@ export const metadata: Metadata = {
     description:
       "Expert study abroad guidance for students in Nepal. 10,000+ students placed, 98% visa approval rate.",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.svg",
+    shortcut: "/favicon.svg",
+  },
   robots: { index: true, follow: true },
 };
 
